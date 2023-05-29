@@ -20,3 +20,6 @@ const counterSlice = createSlice({
     }
   }
 })
+
+export const { incremented } = counterSlice.actions
+export default counterSlice.reducer
