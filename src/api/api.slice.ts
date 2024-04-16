@@ -28,9 +28,20 @@ export const apiSlice = createApi({
         query(limit = 10) {
           return `/breeds?limit=${limit}`
         }
+      }),
+      fetchUsers: builder.query<Breed[], number | void>({
+        query(limit = 10) {
+          return `/breeds?limit=${limit}`
+        }
+      }),
+      putUser: builder.query<Breed[], number | void>({
+        query(limit = 10) {
+          return `/breeds?limit=${limit}`
+        }
       })
     }
-  }
+  },
+
 })
 
-export const { useFetchBreedsQuery } = apiSlice
+export const { useFetchBreedsQuery, useFetchUsersQuery, usePutUserQuery } = apiSlice

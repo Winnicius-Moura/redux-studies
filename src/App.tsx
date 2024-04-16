@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { useFetchBreedsQuery } from './api/api.slice'
+import { useFetchBreedsQuery, useFetchUsersQuery } from './api/api.slice'
 import { useAppDispatch, useAppSelector } from './app/hooks'
 import reactLogo from './assets/react.svg'
 import { incremented } from './features/counter/counterSlice'
@@ -10,7 +10,8 @@ function App() {
 
   const count = useAppSelector((state) => state.counter.value)
   const [numDogs, setNumDogs] = useState(10)
-  const { data = [], isFetching } = useFetchBreedsQuery(numDogs)
+  // const { data = [], isFetching } = useFetchBreedsQuery(numDogs)
+  const { data = [], isFetching } = useFetchUsersQuery(numDogs)
   const dispatch = useAppDispatch()
 
   const handleClick = () => {

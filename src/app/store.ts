@@ -6,7 +6,8 @@ import counterSlice from "../features/counter/counterSlice"
 export const store = configureStore({
   reducer: {
     counter: counterSlice,
-    [apiSlice.reducerPath]: apiSlice.reducer
+    [apiSlice.reducerPath]: apiSlice.reducer,
+    // [usersSlice.reducerPath]: usersSlice.reducer,
   },
 
   middleware: (getDefaultMiddleware) => {
